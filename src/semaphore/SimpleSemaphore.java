@@ -15,7 +15,7 @@ public class SimpleSemaphore {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Pool pool = new Pool(2);
+        Pool pool = new Pool(4);
         Thread t;
         for (int i = 0; i < 10; i++) {
             t = new Thread(new Visitor(pool, "Utente " + (i + 1)));

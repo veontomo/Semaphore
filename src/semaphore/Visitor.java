@@ -37,6 +37,8 @@ class Visitor implements Runnable {
             try {
                 String stand = p.read();
                 System.out.println(name + " getting " + stand);
+                pause = randomGenerator.nextInt(500);
+                Thread.sleep(pause);
                 p.leave(stand);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Visitor.class.getName()).log(Level.SEVERE, null, ex);
